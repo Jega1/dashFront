@@ -26,10 +26,11 @@ register(){
       this.router.navigate(['login'])
       console.log(res)
     })
+
   }else {
     this.api.registerProf(this.user).subscribe(res => {
       this.router.navigate(['login'])
-      console.log(res)
+      console.log(res +'ddddddd')
     })
   }
 }
@@ -37,4 +38,5 @@ register(){
   ngOnInit() {
   }
 
+  
 }
