@@ -16,10 +16,10 @@ export class SpaceStudentComponent implements OnInit {
   constructor(private rout: ActivatedRoute, public api: ApiService) {
 
     let id = this.rout.snapshot.params['id']
-      console.log("AAAAAAA")
-    this.api.getStudentById(id).subscribe(res => {
+      console.log("space student componentsdddddddddddddddddddddddddddddddddddddd")
+        this.api.getStudentById(id).subscribe(res => {
           this.student = res;
-      console.log("dddddd" + res)
+           console.log(res)
        })
    }
 

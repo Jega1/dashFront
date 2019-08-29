@@ -8,7 +8,7 @@ import { ApiService } from '../api.service';
 })
 export class SpaceProfComponent implements OnInit {
 
-
+projets: any;
   students : any = []
 
 
@@ -17,6 +17,13 @@ export class SpaceProfComponent implements OnInit {
       console.log(res)
       this.students = res;
     })
+
+this.api.getAllProjet().subscribe(res => {
+  console.log(res)
+  this.projets = res
+})
+
+
   }
 
   ngOnInit() {

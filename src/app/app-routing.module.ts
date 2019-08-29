@@ -19,6 +19,10 @@ const routes: Routes = [
     component: SpaceProfComponent
   },
   {
+    path: 'getAllProjet',
+    component: SpaceProfComponent
+  },
+  {
     path: 'profil/:id',
     component: ProfilComponent
   },
@@ -26,6 +30,11 @@ const routes: Routes = [
     path: 'getStudent',
     component: SpaceStudentComponent
     
+  },
+  {
+    path: 'profil/:id',
+    component: SpaceStudentComponent
+
   }
 
 

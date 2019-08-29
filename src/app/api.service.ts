@@ -8,9 +8,8 @@ import { HttpClient } from '@angular/common/http';
 export class ApiService {
   server: string = "http://localhost:4043"
 
-  constructor(private http: HttpClient) { 
-    
-  }
+  constructor(private http: HttpClient) {  }
+
 
 
   //Register all users students and profssssss
@@ -19,6 +18,7 @@ export class ApiService {
       user: user
     });
   }
+
   registerProf(user) {
     return this.http.post(this.server + "/prof/registerProf", {
       user: user
@@ -27,8 +27,7 @@ export class ApiService {
 
 //Login all users
   loginStu(user) {
-      //console.log(user)
-    return this.http.post(this.server + "/student/loginStu", {
+       return this.http.post(this.server + "/student/loginStu", {
         user : user
     });
   }
@@ -36,7 +35,6 @@ export class ApiService {
   loginProf(user) {
     return this.http.post(this.server + "/prof/loginProf", {
       user: user
-
     });
   }
 
@@ -45,17 +43,12 @@ export class ApiService {
       return this.http.get(this.server + "/student/listStu");
     }
 
-
     //
     getStudentById(ID){
       return this.http.post(this.server + "/student/getStudent", {
         id: ID
       })
     }
-
-
- 
-
 
     //
     createProjet(projet){
@@ -64,14 +57,14 @@ export class ApiService {
       })
     }
 
-    
+   getProjet() {
+     return this.http.get(this.server + "student/getProjet")
+    }
  
+  getAllProjet() {
+    return this.http.get(this.server + "student/geAlltProjet")
+  }
 
-
- 
- 
- 
- 
     //
   // notePresence(presence) {
   //   return this.http.post(this.server + "/student/notePresence", {
