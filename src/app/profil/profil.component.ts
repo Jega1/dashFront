@@ -18,6 +18,7 @@ export class ProfilComponent implements OnInit {
 
 
   constructor(private rout: ActivatedRoute, public api: ApiService ) {
+    
     let id = this.rout.snapshot.params['id'] // on recupere l'id dans l'url
     // on l'envoie au service qui va ensuite l'envoyer au serveur
     console.log("AAAAAAA")

@@ -9,21 +9,25 @@ import { ApiService } from '../api.service';
 })
 export class SpaceStudentComponent implements OnInit {
 
-  student: any;
+  student: any =[]
 
 
 
   constructor(private rout: ActivatedRoute, public api: ApiService) {
 
-    let id = this.rout.snapshot.params['id'] // on recupere l'id dans l'url
-    // on l'envoie au service qui va ensuite l'envoyer au serveur
-    console.log("AAAAAAA")
+    let id = this.rout.snapshot.params['id']
+      console.log("AAAAAAA")
     this.api.getStudentById(id).subscribe(res => {
-      // cette variable est a variable en haut
-      this.student = res;
-      //  console.log(this.student)
-    })
+          this.student = res;
+      console.log("dddddd" + res)
+       })
    }
+
+  // this.api.getStudents().subscribe(res => {
+  //   console.log(res)
+  //   this.students = res;
+  // })
+ 
 
   ngOnInit() {
   }

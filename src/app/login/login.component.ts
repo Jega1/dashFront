@@ -24,9 +24,9 @@ export class LoginComponent implements OnInit {
     if (this.user.isStudent) {
       console.log(this.user)
       this.api.loginStu(this.user).subscribe(res => {
-         this.router.navigate(['getStudent'])
-        console.log("DEV")
-        console.log(res)
+        this.router.navigate(['getStudent'])
+             console.log("DEV")
+        console.log( res)
 
       })
     } else {
