@@ -27,13 +27,13 @@ export class ApiService {
 
 //Login all users
   loginStu(user) {
-    console.log('OUI')
-    console.log(user)
+      //console.log(user)
     return this.http.post(this.server + "/student/loginStu", {
         user : user
     });
   }
- loginProf(user) {
+
+  loginProf(user) {
     return this.http.post(this.server + "/prof/loginProf", {
       user: user
 
@@ -41,12 +41,38 @@ export class ApiService {
   }
 
 //List students
-          listStu(listStu) {
-            console.log('OUI')
-            console.log(listStu)
-            return this.http.get(this.server + "/student/listStu", {
-            
-            });
-          }
+  getStudents() {
+      return this.http.get(this.server + "/student/listStu");
+    }
+
+
+    //
+    getStudentById(ID){
+      return this.http.post(this.server + "/student/getStudent", {
+        id: ID
+      })
+    }
+
+    //
+    createProjet(projet){
+      return this.http.post(this.server + "/student/createProjet",{
+        projet: projet
+      })
+    }
+
+    
+ 
+
+
+ 
+ 
+ 
+ 
+    //
+  // notePresence(presence) {
+  //   return this.http.post(this.server + "/student/notePresence", {
+  //     pres: presence
+  //   })
+  // }
 
 }

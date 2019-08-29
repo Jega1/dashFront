@@ -1,32 +1,37 @@
-<div class="container">
-      <h1>Inscription</h1>
 
-      <form (submit)="register()">
+<div class="container">
+      <h2>Inscription</h2>
+
+      <div class="insForm">
+      
+            <form (submit)="register()" >
             <div class="form-check">
                   <input type="checkbox" class="form-check-input" name="isStudent" [(ngModel)]="user.isStudent">
                   <label class="form-check-label" for="exampleCheck1">Je suis un élève</label>
             </div>
-            <div class="form-group">
+            <div class="form-group insGroup">
                   <label for="">Nom</label>
                   <input type="text" name="name" [(ngModel)]="user.name" class="form-control">
             </div>
-            <div class="form-group">
+            <div class="form-group insGroup" >
                   <label for="">Email</label>
                   <input type="email" name="email"  [(ngModel)]="user.email" class="form-control">
             </div>
-            <div class="form-group">
+            <div class="form-group insGroup">
                   <label for="">Mot de passe</label>
                   <input type="password" name="password"  [(ngModel)]="user.password" class="form-control">
             </div>
             
-            <div class="form-group" *ngIf="user.isStudent">
+            <div class="form-group insGroup" *ngIf="user.isStudent">
                   <label for="">Classe</label>
                   <input type="text" name="classe"  [(ngModel)]="user.classe" class="form-control">
             </div>
-            <div class="form-group">
+            <div class="form-group insGroup">
                   <label for="">Telephone</label>
                   <input type="tel"  name="telephone"  [(ngModel)]="user.telephone" class="form-control">
             </div>
             <button class="btn btn-primary" type="submit">S'inscrire</button>
       </form>
+
+    </div>
 </div>

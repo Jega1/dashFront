@@ -9,29 +9,15 @@ import { ApiService } from '../api.service';
 export class SpaceProfComponent implements OnInit {
 
 
-  listStu: any = {
-    name:"",
-    email: "",
-    password: "",
-    class: "",
-    projet: [{
-      note: Number,
-      body: String,
-      date: Date
-    }],
-    absence: [{
-      date: Date,
-      why:""
-    }],
-   late: [{
-      date: Date,
-       why: ""
-    }]
+  students : any = []
 
+
+  constructor(public api: ApiService) {
+    this.api.getStudents().subscribe(res=>{
+      console.log(res)
+      this.students = res;
+    })
   }
-
-
-  constructor(public api: ApiService) { }
 
   ngOnInit() {
   }

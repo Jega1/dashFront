@@ -1,0 +1,27 @@
+      body{
+            width: 100%;
+            
+      }
+      h2{
+            text-align: center;
+            color: blueviolet;
+      }
+      .ppCard{
+            display: flex;
+            justify-content: space-around;
+            padding: 4rem 0;
+      }
+      .projetCard{
+            width: 30%;
+            padding: 0;
+            margin: auto;
+            border-radius: 10px;
+            background: rgb(224, 210, 221);
+      }
+      h3{
+            text-align: center;
+            padding: 3rem;
+            background: blueviolet;
+            border-radius: 10px;
+      }
+  

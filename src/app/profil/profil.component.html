@@ -1,0 +1,55 @@
+
+
+<div>
+      <h2>Bienvenue sur votre espace personnel {{student.name}}</h2>
+      <!-- <h2>{{student.email}}</h2> -->
+</div>
+
+
+<div class="ppCard">
+      <div class="projetCard">
+      <h3>Projet</h3>
+      <form (submit)="createProjet()">
+          
+            <div class="form-group">
+                  <label for="">Nom</label>
+                  <input type="text" name="name" [(ngModel)]="projet.name" class="form-control">
+            </div>
+            <div class="form-group">
+                  <label for="">note</label>
+                  <input type="number" name="note" [(ngModel)]="projet.note" class="form-control">
+            </div>
+            <div class="form-group">
+                  <label for="">comments</label>
+                  <input type="text" name="comment" [(ngModel)]="projet.comment" class="form-control">
+            </div>
+
+            <button class="btn btn-primary mybtn" type="submit">Enregistre Projet</button>
+      </form>
+</div>
+     
+     <div class="projetCard">
+      <h3>Presence</h3>
+      <form (submit)="createProjet()">
+      
+            <div class="form-group">
+                  <label for="">Nom</label>
+                  <input type="text" name="name" [(ngModel)]="projet.name" class="form-control">
+            </div>
+            <div class="form-group">
+                  <label for="">note</label>
+                  <input type="number" name="note" [(ngModel)]="projet.note" class="form-control">
+            </div>
+            <div class="form-group">
+                  <label for="">comments</label>
+                  <input type="text" name="comment" [(ngModel)]="projet.comment" class="form-control">
+            </div>
+      
+            <button class="btn btn-primary" type="submit">Enregistre Projet</button>
+      </form>
+</div>
+</div>
+
+
+
+

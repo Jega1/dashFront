@@ -23,10 +23,12 @@ register(){
 
   if(this.user.isStudent){
     this.api.registerStudent(this.user).subscribe(res=>{
+      this.router.navigate(['login'])
       console.log(res)
     })
   }else {
     this.api.registerProf(this.user).subscribe(res => {
+      this.router.navigate(['login'])
       console.log(res)
     })
   }
